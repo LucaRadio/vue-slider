@@ -55,13 +55,16 @@ createApp({
                 }
             }
         },
+        playTimer() {
+            this.timer = setInterval(this.changeImage, 1000)
+        },
         stopTimer() {
-            clearInterval(this.timer)
+            clearInterval(this.timer);
         }
 
     },
     mounted() {
-        this.timer = setInterval(this.changeImage, 3000)
+        this.timer = setInterval(this.changeImage, 1000)
     }
 }
 ).mount("#app");
